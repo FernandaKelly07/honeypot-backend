@@ -9,6 +9,7 @@ class Colmeias {
       res.status(201).json({ msg: "Colmeia cadastrada com sucesso" });
     } catch (err) {
       res.status(401).send(err);
+      console.log(err);
     }
   }
 

@@ -17,7 +17,6 @@ const user = new schema({
   },
   senha: {
     type: String,
-    unique: true,
     trim: true,
     required: true
   }

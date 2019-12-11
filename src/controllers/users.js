@@ -12,6 +12,9 @@ class Usuario {
         .send({ msg: "Usuario cadastrado com sucesso", userId: user._id });
     } catch (err) {
       console.log(err);
+      if (err.code === 11000) {
+        res.status(201).send({ msg: "Dados duplicados" });
+      }
       res.status(401).send(err);
     }
   }
